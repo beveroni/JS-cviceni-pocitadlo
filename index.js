@@ -1,23 +1,23 @@
 const updateCounter = (number) => {
-  const valueElm = document.querySelector('counter__value');
-  valueElm.value = String(numbr).padStart(2, '0');
+  const valueElm = document.querySelector('.counter__value');
+  valueElm.textContent = String(number).padStart(2, '0');
 };
 
 let value = 0;
-const btnUp = document.querySelector('counter__up');
-const btnDown = document.querySelector('counter__down');
+const btnUp = document.querySelector('.counter__up');
+const btnDown = document.querySelector('.counter__down');
 
 btnUp.addEventListener('click', () => {
-  if (velue < 99) {
-    velue + 1;
-    updateCountr(value);
+  if (value < 99) {
+    value = value + 1;
+    updateCounter(value);
   }
 });
 
 btnDown.addEventListener('click', () => {
-  if (velue > 0) {
-    velue - 1;
-    updateCountr(value);
+  if (value > 0) {
+    value = value - 1;
+    updateCounter(value);
   }
 });
 
